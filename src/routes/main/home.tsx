@@ -12,14 +12,9 @@ const GlobalStyle = createGlobalStyle`
   color:white;
 }
 .form-control{
-  
   background-color: rgb(60,60,60) !important;
   color: white !important;
   border-color: black !important;
-  :focus{
-    /* background-color:black; */
-  }
-
 }`;
 
 export default class Home extends Component {
