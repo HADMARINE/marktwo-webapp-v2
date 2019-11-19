@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Spinner } from 'react-bootstrap';
-
 import { createGlobalStyle } from 'styled-components';
 import '../../styles/index.scss';
 const GlobalStyle = createGlobalStyle`
@@ -20,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 class Logout extends Component {
   componentDidMount() {
     localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
     sessionStorage.removeItem('userid');
     window.location.replace('/');
   }
