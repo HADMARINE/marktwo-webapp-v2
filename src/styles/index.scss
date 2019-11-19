@@ -45,22 +45,22 @@ a {
   // margin-left: 3rem;
   // margin-right: 1rem;
   &-xsmall {
-    font-size: 1rem;
+    font-size: calc(0.7rem + 0.5vw);
   }
   &-small {
-    font-size: 1.4rem;
+    font-size: calc(1rem + 0.6vw);
   }
   &-medium {
-    font-size: 2rem;
+    font-size: calc(1.5rem + 1vw);
   }
   &-large {
-    font-size: 3rem;
+    font-size: calc(2rem + 1.5vw);
   }
   &-xlarge {
-    font-size: 5rem;
+    font-size: calc(3.5rem + 2vw);
   }
   &-xxlarge {
-    font-size: 10rem;
+    font-size: calc(6.5rem + 4vw);
   }
   &-bold {
     font-weight: 900;
