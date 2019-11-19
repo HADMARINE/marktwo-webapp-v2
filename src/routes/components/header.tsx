@@ -25,7 +25,7 @@ class Header extends Component {
       publicip: await publicIp.v4()
     };
 
-    await await fetch(apiUri + '/auth/verify', {
+    await fetch(apiUri + '/auth/verify', {
       method: 'POST',
       body: JSON.stringify(queryBody),
       headers: queryHeader
