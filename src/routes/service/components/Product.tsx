@@ -33,7 +33,10 @@ export default class Product extends Component<any> {
     return (
       <>
         <GlobalStyle />
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div
+          className="max-w-sm rounded overflow-hidden shadow-lg"
+          style={{ margin: '1rem' }}
+        >
           <img className="w-full" src={this.state.img} alt="Product Photo" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{this.state.title}</div>
