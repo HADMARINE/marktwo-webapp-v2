@@ -42,7 +42,15 @@ class Header extends Component {
       });
   };
 
+  checkLocalToken = () => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      sessionStorage.setItem('token', token);
+    }
+  };
+
   componentDidMount() {
+    this.checkLocalToken();
     this.checkIsLogin();
   }
 
