@@ -13,6 +13,9 @@ import Notfound from './routes/util/notfound';
 import Logout from './routes/util/logout';
 import Register from './routes/main/register';
 
+import Comsil from './routes/service/Comsil';
+import Utility from './routes/service/Utility';
+
 class App extends React.Component {
   constructor(props: any) {
     super(props);
@@ -30,6 +33,8 @@ class App extends React.Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout} />
             <Route exact path="/register" component={Register} />
+            <Route exact path="/service/comsil" component={Comsil} />
+            <Route exact path="/service/utility" component={Utility} />
             <Route component={Notfound} />
           </Switch>
           <div className="App"></div>
