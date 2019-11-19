@@ -236,6 +236,7 @@ export default class Register extends Component {
     return (
       <>
         <div className="Style-center">
+          <GlobalStyle />
           <div className="Blank-small" />
           <p className="Text-bold Text-large">Register</p>
           <div className="Blank-xsmall" />
