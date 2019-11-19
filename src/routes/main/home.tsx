@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Bootstrap, { Button } from 'react-bootstrap';
+import HorizonIndexCard from '../components/HorizonIndexCard';
 
 import styles, { createGlobalStyle } from 'styled-components';
 import '../../styles/index.scss';
@@ -60,11 +61,8 @@ export default class Home extends Component {
       <div className="Style-center">
         <div>
           <p className="Blank-small" />
-          <p className="Text-medium">하루를 되돌아봐요</p>
-          <p className="Text-xlarge Text-bold">dodol:i</p>
-          <p className="Text-small Text-light">
-            여기에는 아마 사진이 들어갈 것입니다
-          </p>
+          <p className="Text-medium">항목을 선택하세요.</p>
+          <HorizonIndexCard />
         </div>
         <div></div>
       </div>
