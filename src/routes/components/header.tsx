@@ -42,16 +42,16 @@ class Header extends Component {
       });
   };
 
-  checkLocalToken = () => {
+  checkLocalToken = async () => {
     const token = localStorage.getItem('token');
     if (token) {
       sessionStorage.setItem('token', token);
     }
   };
 
-  componentDidMount() {
-    this.checkLocalToken();
-    this.checkIsLogin();
+  async componentWillMount() {
+    await this.checkLocalToken();
+    await this.checkIsLogin();
   }
 
   render() {
@@ -65,6 +65,7 @@ class Header extends Component {
         </a>
       </span>
     );
+
     const unloginLoginBar = (
       <span>
         <a className="Module-loginbutton" href="/logout">
@@ -75,6 +76,7 @@ class Header extends Component {
         </a>
       </span>
     );
+
     return (
       <>
         <div className="Background-header">
