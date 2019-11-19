@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   color : rgb(24,24,24);
 }`;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
 export default class Comsil extends Component {
   render() {
     return (
