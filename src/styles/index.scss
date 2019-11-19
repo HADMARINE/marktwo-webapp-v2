@@ -102,11 +102,11 @@ a {
 
 .Background {
   &-header {
-    background-color: #ffca12;
+    background-color: #2c4ac4;
     padding-bottom: 75px;
   }
   &-header-index {
-    background-color: #ffca12;
+    background-color: #2c4ac4;
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -133,7 +133,7 @@ a {
     color: rgb(77, 92, 124);
   }
   &-mainlogo:active {
-    color: #ffca12;
+    color: #2c4ac4;
   }
 
   &-loginbutton {
@@ -235,7 +235,7 @@ a {
   }
   @keyframes errormessage-animate {
     0% {
-      color: white;
+      color: color(24, 24, 24);
     }
     100% {
       color: red;
