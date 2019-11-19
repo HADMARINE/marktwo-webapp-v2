@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Product from './components/Product';
+import apiUri from '../api/getApiUri';
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
