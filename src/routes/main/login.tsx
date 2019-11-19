@@ -2,9 +2,32 @@ import React, { Component, Fragment, KeyboardEvent } from 'react';
 import { Form, Button, InputGroup, FormControl } from 'react-bootstrap';
 
 import apiUri from '../api/getApiUri';
+import styles, { createGlobalStyle } from 'styled-components';
 
 import '../../styles/index.scss';
 import publicIp from 'public-ip';
+
+const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  background-color:rgb(24,24,24);
+  color:white;
+}
+.form-control{
+  
+  background-color: rgb(60,60,60) !important;
+  color: white !important;
+  border-color: black !important;
+  :focus{
+    /* background-color:black; */
+  }
+
+}`;
+
+const BackgroundImg = styles.img`
+
+`;
 
 export default class Login extends Component {
   state = {
