@@ -120,8 +120,6 @@ a {
   &-mainlogo {
     @extend .Text-bold;
     @extend .Text-large;
-    @extend code;
-    color: black;
     padding-left: 10px;
     padding-top: 10px;
 
