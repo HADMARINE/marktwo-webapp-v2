@@ -26,16 +26,15 @@ export default class Home extends Component {
     super(props);
     document.title = 'dodoli.net';
   }
+  state = {
+    isLogin: false
+  };
   componentWillMount() {
-    let login: any = false;
-
-    if (login === false) {
+    if (localStorage.getItem('token')) {
+      this.setState({ isLogin: true });
     }
   }
   render() {
-    return (
-      <Fragment>
-        <div className="Style-center">
           <div>
             <p className="Blank-small" />
             <p className="Text-medium">하루를 되돌아봐요</p>
