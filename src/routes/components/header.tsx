@@ -50,20 +50,20 @@ class Header extends Component {
     const loginLoginBar = (
       <span>
         <a className="Module-loginbutton" href="/register">
-          Register
+          REGISTER
         </a>
         <a className="Module-loginbutton" href="/login">
-          Login
+          LOGIN
         </a>
       </span>
     );
     const unloginLoginBar = (
       <span>
         <a className="Module-loginbutton" href="/logout">
-          Logout
+          LOGOUT
         </a>
         <a className="Module-loginbutton" href="/mypage">
-          My page
+          MYPAGE
         </a>
       </span>
     );
