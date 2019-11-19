@@ -11,7 +11,6 @@ import Home from './routes/main/home';
 import Login from './routes/main/login';
 import Notfound from './routes/util/notfound';
 import Logout from './routes/util/logout';
-import Post from './routes/post/post';
 import Register from './routes/main/register';
 
 class App extends React.Component {
@@ -30,7 +29,6 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/logout" component={Logout} />
-            <Route exact path="/post" component={Post} />
             <Route exact path="/register" component={Register} />
             <Route component={Notfound} />
           </Switch>
