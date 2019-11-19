@@ -14,9 +14,6 @@ const GlobalStyle = createGlobalStyle`
   background-color: rgb(60,60,60) !important;
   color: white !important;
   border-color: black !important;
-  :focus{
-    /* background-color:black; */
-  }
 
 }`;
 export default class Product extends Component {
