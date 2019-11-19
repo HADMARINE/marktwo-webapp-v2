@@ -34,7 +34,8 @@ export default class Login extends Component {
     isHinder: true,
     id: '',
     password: '',
-    errorMessage: ''
+    errorMessage: '',
+    isRemember: false
   };
 
   handleHinder = () => {
@@ -65,7 +66,10 @@ export default class Login extends Component {
           return;
         }
         // loginsuccess
-        localStorage.setItem('token', data.token.toString());
+        sessionStorage.setItem('token', data.token.toString());
+        if (this.state.isRemember) {
+          localStorage.setItem('token', data.token.toString());
+        }
         window.location.replace('/');
       })
       .catch(e => {
@@ -89,12 +93,24 @@ export default class Login extends Component {
     }
   };
 
+  handleToggle = () => {
+    this.setState({
+      isRemember: !this.state.isRemember
+    });
+  };
+
   render() {
     return (
       <Fragment>
+        <GlobalStyle />
         <div className="Style-center">
           <p className="Blank-small" />
-          <p className="Text-large Text-bold">Login</p>
+          <p
+            className="Text-bold"
+            style={{ letterSpacing: '4px', fontSize: '3rem' }}
+          >
+            LOGIN
+          </p>
           <p className="Blank-xsmall" />
           <div className="Module-input w-auto">
             <InputGroup>
@@ -126,12 +142,20 @@ export default class Login extends Component {
                 name="password"
               />
               <InputGroup.Append>
-                <Button onClick={this.handleHinder}>
+                <Button onClick={this.handleHinder} variant="dark">
                   {this.state.isHinder ? '보이기' : '숨기기'}
                 </Button>
               </InputGroup.Append>
             </InputGroup>
           </div>
+
+          <div className="Blank-xsmall" />
+          <Form.Check
+            type="switch"
+            label="Remember me"
+            id="remember toggle"
+            onChange={this.handleToggle}
+          />
           <p className="Blank-xsmall" />
           {this.state.errorMessage ? (
             <span className="Module-errormessage">
