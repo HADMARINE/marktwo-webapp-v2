@@ -11,14 +11,14 @@ class Header extends Component {
   };
 
   checkIsLogin = async () => {
-    if (!localStorage.getItem('token')) {
+    if (!sessionStorage.getItem('token')) {
       this.setState({ isLogin: false });
       return;
     }
 
     const queryHeader: any = {
       'Content-Type': 'application/json',
-      'x-access-token': localStorage.getItem('token') || 'null'
+      'x-access-token': sessionStorage.getItem('token') || 'null'
     };
 
     const queryBody: any = {
