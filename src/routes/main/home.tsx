@@ -23,10 +23,6 @@ const GlobalStyle = createGlobalStyle`
 }`;
 
 export default class Home extends Component {
-  constructor(props: any) {
-    super(props);
-    document.title = 'dodoli.net';
-  }
   state = {
     isLogin: false
   };

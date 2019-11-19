@@ -6,6 +6,11 @@ import publicIp from 'public-ip';
 import '../../styles/index.scss';
 
 class Header extends Component {
+  constructor(props: any) {
+    super(props);
+    document.title = 'MARKTWO';
+  }
+
   state = {
     isLogin: false
   };
