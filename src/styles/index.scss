@@ -150,7 +150,7 @@ a {
     color: rgb(158, 188, 255);
   }
   &-loginbutton:active {
-    color: #ffca12;
+    color: #2c4ac4;
   }
 
   &-header-index {
@@ -164,18 +164,18 @@ a {
   }
   @keyframes notfound-animate {
     0% {
-      color: black;
+      color: white;
       transform: rotate(0deg);
       font-size: 8rem;
     }
     50% {
-      color: #ffca12;
+      color: #2c4ac4;
       font-size: calc(5rem + 11vw);
       transform: rotate(360deg);
     }
     100% {
       font-size: 8rem;
-      color: black;
+      color: white;
       transform: rotate(720deg);
     }
   }
