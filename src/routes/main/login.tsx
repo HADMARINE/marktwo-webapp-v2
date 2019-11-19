@@ -157,6 +157,7 @@ export default class Login extends Component {
             onChange={this.handleToggle}
           />
           <p className="Blank-xsmall" />
+
           {this.state.errorMessage ? (
             <span className="Module-errormessage">
               {this.state.errorMessage}
@@ -164,11 +165,14 @@ export default class Login extends Component {
           ) : (
             <span style={{ color: 'white' }}>&nbsp;</span>
           )}
-          <div className="Module-buttonstyle">
-            <p className="Module-button" onClick={this.handleLogin}>
-              <span>Login</span>
-            </p>
-          </div>
+          <Button
+            variant="dark"
+            size="lg"
+            style={{ width: '10rem' }}
+            onClick={this.handleLogin}
+          >
+            로그인
+          </Button>
         </div>
       </Fragment>
     );
