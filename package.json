@@ -1,0 +1,67 @@
+{
+  "name": "dodoli-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bootstrap": "^4.3.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "24.0.21",
+    "@types/jquery": "^3.3.31",
+    "@types/mongoose": "^5.5.28",
+    "@types/node": "12.12.3",
+    "@types/public-ip": "^3.1.0",
+    "@types/react": "^16.9.11",
+    "@types/react-bootstrap": "^0.32.20",
+    "@types/react-dom": "^16.9.3",
+    "@types/react-headroom": "^2.2.1",
+    "@types/react-router-dom": "^5.1.1",
+    "@types/react-tag-input": "^6.1.2",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "global": "^4.4.0",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.7.7",
+    "node-sass": "^4.13.0",
+    "nodemon": "^1.19.4",
+    "public-ip": "^3.2.0",
+    "react": "^16.11.0",
+    "react-bootstrap": "^1.0.0-beta.14",
+    "react-dom": "^16.11.0",
+    "react-headroom": "^3.0.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-tag-input": "^6.4.1",
+    "ts-node": "^8.4.1",
+    "tslint": "^6.0.0-beta0",
+    "typescript": "3.6.4"
+  },
+  "scripts": {
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "build": "cross-env NODE_PATH=src react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3"
+  }
+}

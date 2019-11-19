@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,500&display=swap');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  color: black !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.Blank {
+  &-xxsmall {
+    padding-top: 1vh;
+  }
+  &-xsmall {
+    padding-top: 5vh;
+  }
+  &-small {
+    padding-top: 10vh;
+  }
+  &-medium {
+    padding-top: 20vh;
+  }
+  &-large {
+    padding-top: 30vh;
+  }
+}
+
+.Text {
+  // margin-left: 3rem;
+  // margin-right: 1rem;
+  &-xsmall {
+    font-size: 1rem;
+  }
+  &-small {
+    font-size: 1.4rem;
+  }
+  &-medium {
+    font-size: 2rem;
+  }
+  &-large {
+    font-size: 3rem;
+  }
+  &-xlarge {
+    font-size: 5rem;
+  }
+  &-xxlarge {
+    font-size: 10rem;
+  }
+  &-bold {
+    font-weight: 900;
+  }
+  &-light {
+    font-weight: 400;
+  }
+}
+
+.Style {
+  &-flex {
+    display: flex;
+    &-center {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      word-break: break-all;
+    }
+  }
+  &-center {
+    text-align: center;
+  }
+  &-overflow {
+    &-hidden {
+      overflow: hidden;
+    }
+  }
+}
+
+.Align {
+  &-vertical {
+    &-middle {
+      vertical-align: middle;
+    }
+  }
+}
+
+.Background {
+  &-header {
+    background-color: #ffca12;
+    padding-bottom: 75px;
+  }
+  &-header-index {
+    background-color: #ffca12;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.Module {
+  &-header {
+    position: sticky;
+    top: 0;
+  }
+  &-mainlogo {
+    @extend .Text-bold;
+    @extend .Text-large;
+    @extend code;
+    color: black;
+    padding-left: 10px;
+    padding-top: 10px;
+
+    float: left;
+
+    transition: color 0.1s ease-in-out;
+  }
+  &-mainlogo:hover {
+    color: rgb(77, 92, 124);
+  }
+  &-mainlogo:active {
+    color: #ffca12;
+  }
+
+  &-loginbutton {
+    float: right;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-right: calc(5px + 1vw);
+    color: black;
+
+    transition: color 0.1s ease-in-out;
+  }
+  &-loginbutton:hover {
+    color: rgb(77, 92, 124);
+  }
+  &-loginbutton:active {
+    color: #ffca12;
+  }
+
+  &-header-index {
+    margin-left: 1.2rem;
+    color: black;
+    text-decoration: none;
+  }
+  &-notfound {
+    font-weight: 900;
+    animation: notfound-animate 5s infinite;
+  }
+  @keyframes notfound-animate {
+    0% {
+      color: black;
+      transform: rotate(0deg);
+      font-size: 8rem;
+    }
+    50% {
+      color: #ffca12;
+      font-size: calc(5rem + 11vw);
+      transform: rotate(360deg);
+    }
+    100% {
+      font-size: 8rem;
+      color: black;
+      transform: rotate(720deg);
+    }
+  }
+
+  &-notfoundmove {
+    margin-top: 2rem;
+    animation: notfoundmove-animate 5s infinite;
+  }
+  @keyframes notfoundmove-animate {
+    0% {
+      margin-top: 2rem;
+    }
+    50% {
+      margin-top: 8rem;
+    }
+    100% {
+      margin-top: 2rem;
+    }
+  }
+
+  &-button {
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 400;
+    margin-top: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+  }
+  &-button:hover {
+    color: #404040 !important;
+    font-weight: 900 !important;
+    letter-spacing: 6px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+  }
+  &-buttonstyle {
+    align-items: center;
+    vertical-align: center;
+  }
+  &-input {
+    margin-left: calc(50vw - 180px);
+    margin-right: calc(50vw - 180px);
+  }
+  &-errormessage {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: red;
+    animation: errormessage-animate 0.2s ease-in-out;
+  }
+  @keyframes errormessage-animate {
+    0% {
+      color: white;
+    }
+    100% {
+      color: red;
+    }
+  }
+}
+
+// color_key
+// Main key #FFCA12
+// Sub Key #

@@ -1,0 +1,19 @@
+.Module {
+  &-main {
+    width: 30rem;
+    margin: 1rem;
+  }
+  &-header {
+    justify-content: baseline;
+  }
+  &-title {
+    display: flex;
+    font-size: 40px;
+    font-weight: 60;
+  }
+  &-tags {
+    display: flex;
+    align-self: flex-end;
+    // margin-bottom: 1.5rem;
+  }
+}
