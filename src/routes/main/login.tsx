@@ -156,7 +156,7 @@ export default class Login extends Component {
             id="remember toggle"
             onChange={this.handleToggle}
           />
-          <p className="Blank-xsmall" />
+          <p className="Blank-xxsmall" />
 
           {this.state.errorMessage ? (
             <span className="Module-errormessage">
@@ -165,6 +165,7 @@ export default class Login extends Component {
           ) : (
             <span style={{ color: 'white' }}>&nbsp;</span>
           )}
+          <div className="Blank-xxsmall" />
           <Button
             variant="dark"
             size="lg"
