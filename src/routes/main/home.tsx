@@ -1,7 +1,25 @@
 import React, { Component, Fragment } from 'react';
 
+import styles, { createGlobalStyle } from 'styled-components';
 import '../../styles/index.scss';
-import { string, bool } from 'prop-types';
+
+const GlobalStyle = createGlobalStyle`
+* {
+  margin: 0;
+  padding: 0;
+  background-color:rgb(24,24,24);
+  color:white;
+}
+.form-control{
+  
+  background-color: rgb(60,60,60) !important;
+  color: white !important;
+  border-color: black !important;
+  :focus{
+    /* background-color:black; */
+  }
+
+}`;
 
 export default class Home extends Component {
   constructor(props: any) {
