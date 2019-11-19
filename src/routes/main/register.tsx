@@ -238,7 +238,12 @@ export default class Register extends Component {
         <div className="Style-center">
           <GlobalStyle />
           <div className="Blank-small" />
-          <p className="Text-bold Text-large">Register</p>
+          <p
+            className="Text-bold"
+            style={{ letterSpacing: '4px', fontSize: '3rem' }}
+          >
+            REGISTER
+          </p>
           <div className="Blank-xsmall" />
           <div className="Module-input">
             <FormControl
@@ -255,7 +260,7 @@ export default class Register extends Component {
                 {this.state.formErrors.id}
               </span>
             ) : (
-              <span style={{ color: 'white' }}>&nbsp;</span>
+              <span style={{ color: 'black' }}>&nbsp;</span>
             )}
             <div className="Blank-xxsmall" />
             <FormControl
@@ -320,7 +325,7 @@ export default class Register extends Component {
             <div className="Blank-xxsmall" />
             <Button
               size="lg"
-              variant="warning"
+              variant="dark"
               onClick={this.handleRegister}
               disabled={this.state.isLoading}
             >
