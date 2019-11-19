@@ -30,7 +30,7 @@ export default class Home extends Component {
   state = {
     isLogin: false
   };
-  componentWillMount() {
+  componentDidMount() {
     if (localStorage.getItem('token')) {
       this.setState({ isLogin: true });
     }
