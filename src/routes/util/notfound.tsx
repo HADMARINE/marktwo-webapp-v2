@@ -23,13 +23,18 @@ class Notfound extends Component {
         <div className="Style-center Style-overflow-hidden">
           <div>
             <p className="Module-notfoundmove" />
-            <p className="Module-notfound">&nbsp;404&nbsp;</p>
+            <p
+              className="Module-notfound"
+              style={{ backgroundColor: '#00000000' }}
+            >
+              &nbsp;404&nbsp;
+            </p>
           </div>
           <p className="Module-notfoundmove" />
+          <div />
           <p className="Text-medium"> Not found</p>
-          <div className="Module-not" />
-          <p className="Text-xsmall">
-            <code>무엇을 찾아 헤메던 것일까</code>
+          <p className="Text-small">
+            <code style={{ color: 'white' }}>무엇을 찾아 헤메던 것일까</code>
           </p>
         </div>
       </>
