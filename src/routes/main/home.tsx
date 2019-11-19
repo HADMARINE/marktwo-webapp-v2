@@ -22,7 +22,7 @@ export default class Home extends Component {
     isLogin: false
   };
   componentDidMount() {
-    if (localStorage.getItem('token')) {
+    if (sessionStorage.getItem('token')) {
       this.setState({ isLogin: true });
     }
   }
