@@ -120,11 +120,13 @@ a {
   &-mainlogo {
     @extend .Text-bold;
     @extend .Text-large;
+    // @extend code;
+    font-weight: 900;
+    color: white;
     padding-left: 10px;
     padding-top: 10px;
 
     float: left;
-
     transition: color 0.1s ease-in-out;
   }
   &-mainlogo:hover {
@@ -140,7 +142,7 @@ a {
     font-weight: 500;
     margin-top: 30px;
     margin-right: calc(5px + 1vw);
-    color: black;
+    color: white;
 
     transition: color 0.1s ease-in-out;
   }
