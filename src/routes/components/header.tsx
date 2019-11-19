@@ -71,8 +71,16 @@ class Header extends Component {
       <>
         <div className="Background-header">
           <div>
-            <a className="Module-mainlogo" href="/">
-              dodol:i
+            <a
+              className="Module-mainlogo"
+              style={
+                window.innerWidth > 500
+                  ? { fontSize: '3rem' }
+                  : { fontSize: '2rem', marginTop: '0.5rem' }
+              }
+              href="/"
+            >
+              MARKTWO
             </a>
 
             {!this.state.isLogin ? loginLoginBar : unloginLoginBar}
