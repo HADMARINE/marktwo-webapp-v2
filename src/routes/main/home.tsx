@@ -44,6 +44,7 @@ export default class Home extends Component {
             height="400px"
             alt="예시 사진"
           />
+          <div className="Blank-xxsmall" />
           <p className="Text-small Text-xlight">
             서비스를 이용하기 위해서는 로그인이 필요합니다.
           </p>
