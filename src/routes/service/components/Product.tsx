@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   background-color:rgb(24,24,24);
-  color:white !important;
+  color: white !important ;
 }
 .form-control{
   
@@ -40,7 +40,7 @@ export default class Product extends Component<any> {
           <img className="w-full" src={this.state.img} alt="Product Photo" />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{this.state.title}</div>
-            <p className="text-gray-700 text-base">{this.state.content}</p>
+            <p className="text-700 text-base">{this.state.content}</p>
           </div>
           <div
             className="px-6 py-4"
