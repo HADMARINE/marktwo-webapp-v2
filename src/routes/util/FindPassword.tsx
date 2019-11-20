@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-
+import '../../styles/index.scss';
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -20,6 +20,7 @@ export default class FindPassword extends Component {
     return (
       <>
         <GlobalStyle />
+        <p className="Text-medium Text-bold">Text</p>
       </>
     );
   }
