@@ -14,6 +14,9 @@ const GlobalStyle = createGlobalStyle`
   background-color:rgb(24,24,24);
   color:white;
 }
+body{
+  background-color:rgb(24,24,24);
+}
 .form-control{
   
   background-color: rgb(60,60,60) !important;
