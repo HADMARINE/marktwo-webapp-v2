@@ -33,7 +33,7 @@ export default class ProductList extends Component<any> {
       list = (
         <Product
           key="0"
-          img="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSpHMNyvIRy6PolVWkmMg80JA0Kdcldq3vIxohYsRrtBKVZEyJAW6ls4b6EoKP7DzCQ6Fvnq5C694tN5eN06_Hb5gHp2.webp?r=105"
+          img="http://marktwo.iptime.org:35492/list/HDD1/SUNRINT_SHARE/static/404error.png"
           content="표시할 데이터가 없습니다."
           title="데이터가 없습니다."
           link="/"
