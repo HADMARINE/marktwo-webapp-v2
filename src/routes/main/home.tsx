@@ -62,14 +62,29 @@ export default class Home extends Component {
     );
 
     const LoginHome = (
-      <div className="Style-center">
-        <div>
-          <p className="Blank-small" />
-          <p className="Text-medium">항목을 선택하세요.</p>
-          <HorizonIndexCard />
+      <Wrapper>
+        <GlobalStyle />
+        <div className="Style-center">
+          <span style={{ backgroundColor: 'white' }}>
+            <p className="Blank-small" />
+            <p className="Text-large Text-bold" style={{ color: 'white' }}>
+              MARKTWO
+            </p>
+            <CardWrapper>
+              <HorizonIndexCard
+                title="컴실유틸"
+                content="여러분의 컴퓨터실 생활에 도움이 될 수 있는 유틸리티가 많이 있습니다."
+                link="/service/comsil"
+              />
+              <HorizonIndexCard
+                title="유틸리티"
+                content="그래픽툴부터 게임, 오피스 등 우리에게 꼭 필요한 프로그램들이 준비되어 있습니다."
+                link="/service/utility"
+              />
+            </CardWrapper>
+          </span>
         </div>
-        <div></div>
-      </div>
+      </Wrapper>
     );
     return <>{this.state.isLogin ? LoginHome : unLoginHome}</>;
   }
