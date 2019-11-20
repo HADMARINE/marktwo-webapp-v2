@@ -25,6 +25,7 @@ export default class ProductList extends Component<any> {
           img={info.img}
           content={info.content}
           link={info.link}
+          maclink={info.maclink}
         />
       ));
     } catch (e) {
