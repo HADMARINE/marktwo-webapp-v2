@@ -326,6 +326,14 @@ export default class Register extends Component {
               <span style={{ color: 'white' }}>&nbsp;</span>
             )}
             <div className="Blank-xxsmall" />
+            <p className="Text-small Text-xlight">
+              회원가입 시{' '}
+              <a href="/terms">
+                <b style={{ color: 'skyblue' }}>이용 약관</b>
+              </a>
+              에 동의한 것으로 간주 됩니다.
+            </p>
+            <div className="Blank-xsmall" />
             <Button
               size="lg"
               variant="dark"
