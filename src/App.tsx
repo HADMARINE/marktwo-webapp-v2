@@ -12,6 +12,7 @@ import Login from './routes/main/login';
 import Notfound from './routes/util/notfound';
 import Logout from './routes/util/logout';
 import Register from './routes/main/register';
+import FindPassword from './routes/util/FindPassword';
 
 import Comsil from './routes/service/Comsil';
 import Utility from './routes/service/Utility';
@@ -35,6 +36,7 @@ class App extends React.Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/service/comsil" component={Comsil} />
             <Route exact path="/service/utility" component={Utility} />
+            <Route exact path="/find/password" component={FindPassword} />
             <Route component={Notfound} />
           </Switch>
           <div className="App"></div>
