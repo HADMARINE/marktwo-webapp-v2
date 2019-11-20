@@ -48,6 +48,9 @@ export default class Utilty extends Component {
         alert(e);
       });
   };
+  componentWillMount() {
+    this.handleDataRecieve();
+  }
   render() {
     return (
       <>
