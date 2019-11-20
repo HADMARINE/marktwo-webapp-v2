@@ -24,12 +24,42 @@ export default class Product extends Component<any> {
     img: this.props.img,
     title: this.props.title,
     content: this.props.content,
-    link: this.props.link
+    link: this.props.link,
+    maclink: this.props.maclink
   };
   handleOpenLink = () => {
     window.location.replace(this.state.link);
   };
+  handleOpenMacLink = () => {
+    window.location.replace(this.state.maclink);
+  };
   render() {
+    const windowLink = (
+      <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+        onClick={this.handleOpenLink}
+      >
+        Download
+      </button>
+    );
+
+    const windowMacLink = (
+      <>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          onClick={this.handleOpenLink}
+          style={{ marginRight: '1rem' }}
+        >
+          Windows
+        </button>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+          onClick={this.handleOpenMacLink}
+        >
+          Mac
+        </button>
+      </>
+    );
     return (
       <>
         <GlobalStyle />
@@ -46,12 +76,7 @@ export default class Product extends Component<any> {
             className="px-6 py-4"
             style={{ display: 'flex', justifyContent: 'center' }}
           >
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-              onClick={this.handleOpenLink}
-            >
-              Download
-            </button>
+            {!this.state.maclink ? windowLink : windowMacLink}
           </div>
         </div>
       </>
