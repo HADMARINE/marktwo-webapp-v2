@@ -92,7 +92,7 @@ class Header extends Component {
               style={
                 window.innerWidth > 500
                   ? { fontSize: '3rem' }
-                  : { fontSize: '2rem', marginTop: '0.5rem' }
+                  : { fontSize: '2.2rem', marginTop: '0.6rem' }
               }
               href="/"
             >
