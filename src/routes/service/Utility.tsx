@@ -28,8 +28,25 @@ const Wrapper = styled.div`
 `;
 
 export default class Utilty extends Component {
+  state = { data: null };
+
   handleDataRecieve = async () => {
-    fetch(apiUri);
+    // const queryHeader: any = {
+    //   'Content-Type': 'application/json'
+    // };
+    await fetch(apiUri + '/data/utility', {
+      method: 'GET'
+      //   headers: queryHeader
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data: JSON.stringify(data.result)
+        });
+      })
+      .catch(e => {
+        alert(e);
+      });
   };
   render() {
     return (
@@ -41,7 +58,7 @@ export default class Utilty extends Component {
           <p className="Text-medium Text-bold">유틸리티</p>
         </Wrapper>
         <Wrapper>
-          <ProductInfoList data="여기에 데이터 삽입" />
+          <ProductInfoList data={this.state.data} />
         </Wrapper>
       </>
     );
