@@ -4,10 +4,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 * {
-  margin: 0;
-  padding: 0;
-  background-color:rgb(24,24,24);
-  color:white !important;
+
 }
 .form-control{
   
