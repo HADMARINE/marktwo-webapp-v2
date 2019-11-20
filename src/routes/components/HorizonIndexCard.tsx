@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/tailwind.css';
 import styled, { createGlobalStyle } from 'styled-components';
-
+import './HorizonIndexCard.scss';
 const GlobalStyle = createGlobalStyle`
 * {
 
@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
   border-color: black !important;
 
 }`;
+
+const Wrapper = styled.span`
+  color: white;
+  background-color: rgb(24, 24, 24);
+`;
+
 export default class HorizonIndexCard extends Component<any> {
   constructor(props: any) {
     super(props);
