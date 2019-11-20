@@ -2,15 +2,17 @@ import React, { Component, Fragment } from 'react';
 import Bootstrap, { Button } from 'react-bootstrap';
 import HorizonIndexCard from '../components/HorizonIndexCard';
 
-import styles, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import '../../styles/index.scss';
 
 const GlobalStyle = createGlobalStyle`
-* {
-  margin: 0;
-  padding: 0;
+body {
+  /* margin: 0;
+  padding: 0; */
   background-color:rgb(24,24,24);
   color:white;
+  justify-content:center;
+ 
 }
 .form-control{
   background-color: rgb(60,60,60) !important;
@@ -18,6 +20,23 @@ const GlobalStyle = createGlobalStyle`
   border-color: black !important;
 }`;
 
+const Wrapper = styled.div`
+  background-color: rgb(24, 24, 24);
+  color: white;
+`;
+
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  word-break: break-all;
+`;
+
+const CardWrapper = styled.span`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
 export default class Home extends Component {
   state = {
     isLogin: false
@@ -48,6 +67,7 @@ export default class Home extends Component {
           <p className="Text-small Text-xlight">
             서비스를 이용하기 위해서는 로그인이 필요합니다.
           </p>
+          <div className="Blank-xxsmall" />
           <Button
             variant="dark"
             href="/login"
