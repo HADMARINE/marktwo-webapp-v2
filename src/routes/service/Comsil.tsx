@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Product from './components/Product';
 import apiUri from '../api/getApiUri';
+import ProductInfoList from './components/ProductInfoList';
+import '../../styles/index.scss';
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -23,6 +25,11 @@ export default class Comsil extends Component {
         <GlobalStyle />
         <div className="Blank-small" />
         <Wrapper>
+          <div className="Blank-small" />
+          <p className="Text-medium Text-bold">컴실유틸</p>
+        </Wrapper>
+        <Wrapper>
+          <ProductInfoList data="" />
         </Wrapper>
       </>
     );
