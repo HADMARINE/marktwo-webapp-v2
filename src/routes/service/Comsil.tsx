@@ -16,9 +16,32 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 export default class Comsil extends Component {
-  handleDataRecieve = async () => {
-    fetch(apiUri);
+  state = {
+    data: null
   };
+
+  handleDataRecieve = async () => {
+    // const queryHeader: any = {
+    //   'Content-Type': 'application/json'
+    // };
+    await fetch(apiUri + '/data/comsil', {
+      method: 'GET'
+      //   headers: queryHeader
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          data: JSON.stringify(data.result)
+        });
+      })
+      .catch(e => {
+        alert(e);
+      });
+  };
+
+  componentWillMount() {
+    this.handleDataRecieve();
+  }
   render() {
     return (
       <>
@@ -29,7 +52,7 @@ export default class Comsil extends Component {
           <p className="Text-medium Text-bold">컴실유틸</p>
         </Wrapper>
         <Wrapper>
-          <ProductInfoList data="" />
+          <ProductInfoList data={this.state.data} />
         </Wrapper>
       </>
     );
