@@ -40,7 +40,6 @@ class Header extends Component {
         if (!data.userid) {
           localStorage.setItem('token', '');
           sessionStorage.setItem('userid', '');
-          window.location.replace('/');
           return;
         }
         this.setState({ isLogin: true });
