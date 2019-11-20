@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import apiUri from '../api/getApiUri';
 
 import publicIp from 'public-ip';
+import Alert from './Alert';
 
 import '../../styles/index.scss';
 
