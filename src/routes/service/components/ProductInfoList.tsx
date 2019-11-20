@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
 
 export default class ProductList extends Component<any> {
   static defaultProps = {
@@ -33,6 +40,6 @@ export default class ProductList extends Component<any> {
       );
     }
 
-    return <div>{list}</div>;
+    return <Wrapper>{list}</Wrapper>;
   }
 }
