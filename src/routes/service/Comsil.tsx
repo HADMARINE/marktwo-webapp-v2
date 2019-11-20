@@ -14,6 +14,9 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 export default class Comsil extends Component {
+  handleDataRecieve = async () => {
+    fetch(apiUri);
+  };
   render() {
     return (
       <>
