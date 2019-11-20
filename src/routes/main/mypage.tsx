@@ -30,7 +30,14 @@ export default class Mypage extends Component {
     return (
       <>
         <GlobalStyle />
-        <Wrapper></Wrapper>
+        <div className="Blank-small" />
+        <Wrapper>
+          <p
+            style={{ fontSize: '3rem', fontWeight: 900, letterSpacing: '4px' }}
+          >
+            MY PAGE
+          </p>
+        </Wrapper>
       </>
     );
   }
