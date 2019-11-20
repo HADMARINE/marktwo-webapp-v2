@@ -20,11 +20,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
 }`;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 `;
+
 export default class Utilty extends Component {
   handleDataRecieve = async () => {
     fetch(apiUri);
