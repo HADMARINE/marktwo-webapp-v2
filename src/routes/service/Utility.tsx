@@ -26,6 +26,9 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 export default class Utilty extends Component {
+  handleDataRecieve = async () => {
+    fetch(apiUri);
+  };
   render() {
     return (
       <>
