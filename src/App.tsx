@@ -14,6 +14,7 @@ import Logout from './routes/util/logout';
 import Register from './routes/main/register';
 import Mypage from './routes/main/mypage';
 import FindPassword from './routes/util/FindPassword';
+import UploadProducts from './routes/util/UploadProducts';
 
 import Comsil from './routes/service/Comsil';
 import Utility from './routes/service/Utility';
@@ -41,6 +42,8 @@ class App extends React.Component {
             <Route exact path="/service/utility" component={Utility} />
 
             <Route exact path="/find/password" component={FindPassword} />
+
+            <Route exact path="/admin/upload" component={UploadProducts} />
 
             <Route component={Notfound} />
           </Switch>
