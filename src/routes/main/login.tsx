@@ -148,7 +148,6 @@ export default class Login extends Component {
               </InputGroup.Append>
             </InputGroup>
           </div>
-
           <div className="Blank-xsmall" />
           <Form.Check
             type="switch"
@@ -157,7 +156,6 @@ export default class Login extends Component {
             onChange={this.handleToggle}
           />
           <p className="Blank-xxsmall" />
-
           {this.state.errorMessage ? (
             <span className="Module-errormessage">
               {this.state.errorMessage}
@@ -174,6 +172,13 @@ export default class Login extends Component {
           >
             로그인
           </Button>
+          <div className="Blank-xsmall" />
+          <div>
+            또는{' '}
+            <a href="/find/password" style={{ color: 'skyblue' }}>
+              비밀번호 찾기
+            </a>
+          </div>
         </div>
       </Fragment>
     );
