@@ -35,12 +35,16 @@ export default class Home extends Component {
           <p className="Blank-small" />
           <p className="Text-medium">쾌적한 컴퓨터실 생활의 중심</p>
           <p className="Text-xlarge Text-bold">MARKTWO</p>
-          <img
-            src="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSpHMNyvIRy6PolVWkmMg80JA0Kdcldq3vIxohYsRrtBKVZEyJAW6ls4b6EoKP7DzCQ6Fvnq5C694tN5eN06_Hb5gHp2.webp?r=105"
-            height="400px"
-            alt="예시 사진"
-          />
-          <div className="Blank-xxsmall" />
+          {/* <Center>
+            <img
+              src="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSpHMNyvIRy6PolVWkmMg80JA0Kdcldq3vIxohYsRrtBKVZEyJAW6ls4b6EoKP7DzCQ6Fvnq5C694tN5eN06_Hb5gHp2.webp?r=105"
+              height="200px"
+              alt="예시 사진"
+              className="Style-flex-center"
+            />
+          </Center> */}
+
+          <div className="Blank-medium" />
           <p className="Text-small Text-xlight">
             서비스를 이용하기 위해서는 로그인이 필요합니다.
           </p>
