@@ -9,7 +9,13 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   color : rgb(24,24,24);
-}`;
+}
+body {
+    background-color:rgb(24,24,24);
+    overflow-y:hidden;
+}
+
+`;
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
