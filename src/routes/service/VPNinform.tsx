@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
   background-color:rgb(24,24,24);
   color:white;
 }
+body{    
+    background-color: rgb(24,24,24);
+    overflow-y:hidden;
+}
 .form-control{
   background-color: rgb(60,60,60) !important;
   color: white !important;
