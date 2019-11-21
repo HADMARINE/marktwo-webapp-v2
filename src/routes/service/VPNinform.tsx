@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -9,14 +8,9 @@ const GlobalStyle = createGlobalStyle`
   color:white;
 }
 .form-control{
-  
   background-color: rgb(60,60,60) !important;
   color: white !important;
   border-color: black !important;
-  :focus{
-    /* background-color:black; */
-  }
-
 }`;
 
 export default class VPNinform extends Component {
