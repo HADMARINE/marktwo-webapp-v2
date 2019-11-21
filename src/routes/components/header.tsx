@@ -17,6 +17,7 @@ class Header extends Component {
   };
 
   checkIsLogin = async () => {
+    await this.checkLocalToken();
     if (!sessionStorage.getItem('token')) {
       this.setState({ isLogin: false });
       return;
@@ -38,14 +39,23 @@ class Header extends Component {
     })
       .then(res => res.json())
       .then(data => {
+        if (data.status === 403) {
+          sessionStorage.removeItem('token');
+          sessionStorage.removeItem('userid');
+          localStorage.removeItem('token');
+          alert('Error ' + data.status + ' : ' + data.message);
+          window.location.replace('/');
+        }
         if (!data.userid) {
-          localStorage.setItem('token', '');
-          sessionStorage.setItem('userid', '');
+          localStorage.removeItem('token');
+          sessionStorage.removeItem('userid');
+          this.setState({ isLogin: false });
           return;
         }
         this.setState({ isLogin: true });
         sessionStorage.setItem('userid', data.userid);
-      });
+      })
+      .catch();
   };
 
   checkLocalToken = async () => {
@@ -56,7 +66,6 @@ class Header extends Component {
   };
 
   async componentWillMount() {
-    await this.checkLocalToken();
     await this.checkIsLogin();
   }
 
