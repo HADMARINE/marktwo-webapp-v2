@@ -293,7 +293,7 @@ export default class Register extends Component {
             )}
             <div className="Blank-xxsmall" />
             <FormControl
-              placeholder="Nickname"
+              placeholder="이름"
               type="name"
               size="lg"
               value={this.state.nickname}
