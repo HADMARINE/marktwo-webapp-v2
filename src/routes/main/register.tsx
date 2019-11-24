@@ -103,7 +103,14 @@ export default class Register extends Component {
               name:'이름이 올바르지 않습니다.'
             }
           })
+          return;
         }
+        this.setState({
+          formErrors:{
+            ...this.state.formErrors,
+            name:''
+          }
+        })
         break;
       case 'email':
         const emailRegex = new RegExp(
