@@ -29,10 +29,10 @@ export default class Register extends Component {
     id: '',
     password: '',
     passwordCheck: '',
-    nickname: '',
+    name: '',
     email: '',
     isLoading: false,
-    formErrors: { id: '', password: '', nickname: '', email: '' }
+    formErrors: { id: '', password: '', name: '', email: '' }
   };
 
   handleChange = async (e: any) => {
@@ -95,8 +95,15 @@ export default class Register extends Component {
           }
         });
         return;
-      case 'nickname':
-        this.handleOverlap(target);
+      case 'name':
+        if(this.state.name.length <= 1 || this.state.name.length >= 5){
+          this.setState({
+            formErrors :{
+              ...this.state.formErrors,
+              name:'이름이 올바르지 않습니다.'
+            }
+          })
+        }
         break;
       case 'email':
         const emailRegex = new RegExp(
@@ -130,7 +137,7 @@ export default class Register extends Component {
     if (
       this.state.formErrors.email ||
       this.state.formErrors.id ||
-      this.state.formErrors.nickname ||
+      this.state.formErrors.name ||
       this.state.formErrors.password
     ) {
       alert('잘못 입력된 정보를 다시 확인하세요.');
@@ -140,7 +147,7 @@ export default class Register extends Component {
     if (
       !this.state.email ||
       !this.state.id ||
-      !this.state.nickname ||
+      !this.state.name ||
       !this.state.password
     ) {
       alert('비어있는 정보가 있습니다.');
@@ -150,7 +157,7 @@ export default class Register extends Component {
     const queryBody: any = {
       uid: this.state.id,
       password: this.state.password,
-      nickname: this.state.nickname,
+      name: this.state.name,
       email: this.state.email
     };
     const queryHeader: any = {
@@ -296,14 +303,14 @@ export default class Register extends Component {
               placeholder="이름"
               type="name"
               size="lg"
-              value={this.state.nickname}
+              value={this.state.name}
               onChange={this.handleChange}
-              name="nickname"
+              name="name"
             />
             <div className="Blank-xxsmall" />
-            {this.state.formErrors.nickname ? (
+            {this.state.formErrors.name ? (
               <span className="Module-errormessage">
-                {this.state.formErrors.nickname}
+                {this.state.formErrors.name}
               </span>
             ) : (
               <span style={{ color: 'white' }}>&nbsp;</span>

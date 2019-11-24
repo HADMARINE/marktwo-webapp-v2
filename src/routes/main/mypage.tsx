@@ -30,7 +30,7 @@ export default class Mypage extends Component {
   state = {
     id: '',
     email: '',
-    nickname: '',
+    name: '',
 
     login: false
   };
@@ -53,7 +53,7 @@ export default class Mypage extends Component {
             login: true,
             id: data.uid,
             email: data.email,
-            nickname: data.nickname
+            name: data.name
           });
         })
         .catch(e => {
@@ -107,9 +107,9 @@ export default class Mypage extends Component {
             <div className="Blank-xxsmall" />
             <InputGroup>
               <InputGroup.Prepend>
-                <InputGroup.Text>Nickname</InputGroup.Text>
+                <InputGroup.Text>name</InputGroup.Text>
               </InputGroup.Prepend>
-              <FormControl value={this.state.nickname} />
+              <FormControl value={this.state.name} />
               <InputGroup.Append>
                 <Button variant="dark">변경</Button>
               </InputGroup.Append>
