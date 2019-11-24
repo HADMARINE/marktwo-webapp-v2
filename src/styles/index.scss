@@ -171,15 +171,15 @@ a {
     0% {
       color: white;
       transform: rotate(0deg);
-      font-size: 8rem;
+      font-size: 120px;
     }
     50% {
       color: #2c4ac4;
-      font-size: calc(5rem + 11vw);
+      font-size: calc(120px + 11vw);
       transform: rotate(360deg);
     }
     100% {
-      font-size: 8rem;
+      font-size: 120px;
       color: white;
       transform: rotate(720deg);
     }
