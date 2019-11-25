@@ -86,10 +86,7 @@ export default class Home extends Component {
         <GlobalStyle />
         <div className="Style-center">
           <span style={{ backgroundColor: 'white' }}>
-            <p className="Blank-small" />
-            <p className="Text-large Text-bold" style={{ color: 'white' }}>
-              MARKTWO
-            </p>
+            <p className="Blank-xsmall" />
             <CardWrapper>
               <HorizonIndexCard
                 title="컴실유틸"
