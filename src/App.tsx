@@ -49,7 +49,7 @@ class App extends React.Component {
 
             <Route component={Notfound} />
           </Switch>
-          <div className="App"></div>
+        <div className='Blank-small'/>
         </Router>
       </div>
     );
