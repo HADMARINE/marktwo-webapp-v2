@@ -40,7 +40,9 @@ export default class HorizonIndexCard extends Component<any> {
         style={{ margin: '1rem', backgroundColor: 'rgb(60,60,60)' }}
       >
         <div onClick={this.handleOpenLink} className="px-6 py-4">
-          <div className="font-bold text-xl mb-2" style={{ fontSize: '5rem' }}>
+          <div className="font-bold text-xl mb-2" style={
+                {fontSize :'4.3rem'}
+              }>
             {this.state.title}
           </div>
           <p className="text-700 text-base" onClick={this.handleOpenLink}>
