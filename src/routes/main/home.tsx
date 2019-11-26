@@ -103,6 +103,11 @@ export default class Home extends Component {
               content="디자이너를 위한 그래픽 툴이 준비되어 있습니다. 맥과 윈도우 가리지 않고요."
               link='/service/graphics'
               />
+              <HorizonIndexCard
+              title='게임'
+              content='재밌는 게임들이 준비되어 있습니다. 다운로드만 하세요.'
+              link='/service/game'
+              />
             </CardWrapper>
           </span>
         </div>
