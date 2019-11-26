@@ -55,7 +55,7 @@ export default class Comsil extends Component {
         <div className="Blank-small" />
         <Wrapper>
           <div className="Blank-small" />
-          <p className="Text-medium Text-bold">컴실유틸</p>
+          <p className="Text-medium Text-bold">그래픽 툴</p>
         </Wrapper>
         <Wrapper>
           <ProductInfoList data={this.state.data} />
