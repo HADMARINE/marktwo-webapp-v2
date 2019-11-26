@@ -19,6 +19,7 @@ import Terms from './routes/etc/Terms';
 
 import Comsil from './routes/service/Comsil';
 import Utility from './routes/service/Utility';
+import Graphics from './routes/service/Graphics'
 
 class App extends React.Component {
   constructor(props: any) {
@@ -42,6 +43,7 @@ class App extends React.Component {
 
             <Route exact path="/service/comsil" component={Comsil} />
             <Route exact path="/service/utility" component={Utility} />
+            <Route exact path='/service/graphics' component={Graphics}/>
 
             <Route exact path="/find/password" component={FindPassword} />
 
