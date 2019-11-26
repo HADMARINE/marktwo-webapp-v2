@@ -98,7 +98,7 @@ class Header extends Component {
           <div>
             <a
               className="Module-mainlogo"
-              style={{ fontSize: '2rem', marginTop: '0.8rem' }}
+              style={{ fontSize: '2rem', marginTop: '0rem' }}
               href="/"
             >
               MARKTWO
