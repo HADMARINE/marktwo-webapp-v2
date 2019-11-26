@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
     background-color:rgb(24,24,24);
-    overflow-y:hidden;
+    overflow-y:visible;
 }
 
 `;
