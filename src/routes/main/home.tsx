@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Bootstrap, { Button } from 'react-bootstrap';
+import Bootstrap, { Button,Alert } from 'react-bootstrap';
 import HorizonIndexCard from '../components/HorizonIndexCard';
 
 import styled, { createGlobalStyle } from 'styled-components';
@@ -37,16 +37,33 @@ const CardWrapper = styled.span`
   justify-content: center;
   flex-wrap: wrap;
 `;
+
+
+
 export default class Home extends Component {
   state = {
-    isLogin: false
+    isLogin: false,
+    isAlertVisible:true
   };
   componentDidMount() {
     if (sessionStorage.getItem('token')) {
       this.setState({ isLogin: true });
     }
   }
+  
   render() {
+    const MainAlert = (
+      <Alert variant="dark" onClose={ () => this.setState({isAlertVisible: false})}  dismissible>
+        <Alert.Heading>감사합니다!</Alert.Heading>
+        <p>
+          여러분의 성원에 힘입어 MARKTWO V2 를 발표하게 되었습니다.<br/>
+          모든 기능이 업데이트되어 돌아왔으며 지속적으로 업데이트 될 예정입니다.<br/>
+          모든 사람이 제한없는 컴퓨터 라이프를 누릴 수 있도록, MARKTWO는 지속적으로 운영될 것입니다.<br/>
+          후원은 
+          <a href="mailto:joonlee031@outlook.com" style={{color:'skyblue'}}>이메일</a> 로 문의바랍니다. 감사합니다
+        </p>
+      </Alert>
+    )
     const unLoginHome = (
       <div className="Style-center">
         <GlobalStyle />
@@ -87,6 +104,8 @@ export default class Home extends Component {
         <div className="Style-center">
           <span style={{ backgroundColor: 'white' }}>
             <p className="Blank-xsmall" />
+
+            {(this.state.isAlertVisible) ? MainAlert : <></>}
             <CardWrapper>
               <HorizonIndexCard
                 title="컴실유틸"
