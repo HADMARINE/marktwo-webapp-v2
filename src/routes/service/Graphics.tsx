@@ -3,6 +3,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Product from './components/Product';
 import apiUri from '../api/getApiUri';
 import ProductInfoList from './components/ProductInfoList';
+
+import verifyToken from '../middlewares/verifyToken'
 import '../../styles/index.scss';
 const GlobalStyle = createGlobalStyle`
 * {
@@ -46,6 +48,7 @@ export default class Comsil extends Component {
   };
 
   componentWillMount() {
+    verifyToken();
     this.handleDataRecieve();
   }
   render() {

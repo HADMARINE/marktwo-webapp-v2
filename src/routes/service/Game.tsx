@@ -4,6 +4,7 @@ import Product from './components/Product';
 import apiUri from '../api/getApiUri';
 import ProductInfoList from './components/ProductInfoList';
 import '../../styles/index.scss';
+import verifyToken from '../middlewares/verifyToken'
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -46,6 +47,7 @@ export default class Comsil extends Component {
   };
 
   componentWillMount() {
+    verifyToken();
     this.handleDataRecieve();
   }
   render() {

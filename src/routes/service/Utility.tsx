@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import ProductInfoList from './components/ProductInfoList';
 import apiUri from '../api/getApiUri';
+import verifyToken from '../middlewares/verifyToken'
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -49,6 +50,7 @@ export default class Utilty extends Component {
       });
   };
   componentWillMount() {
+    verifyToken();
     this.handleDataRecieve();
   }
   render() {
