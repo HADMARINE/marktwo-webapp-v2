@@ -21,7 +21,7 @@ export async function verifyToken(){
         headers:queryHeader
     }).then(res => res.json())
     .then(data => {
-        if(data.message){
+        if(data.code !== 200){
             alert(data.message);
             window.location.replace("/");
         }

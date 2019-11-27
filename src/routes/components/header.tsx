@@ -29,7 +29,7 @@ class Header extends Component {
     };
 
     const queryBody: any = {
-      publicip: await publicIp.v4()
+      userip: await publicIp.v4()
     };
 
     await fetch(apiUri + '/auth/verify', {
@@ -104,7 +104,7 @@ class Header extends Component {
               MARKTWO
             </a>
 
-            {!this.state.isLogin ? loginLoginBar : unloginLoginBar}
+            {!sessionStorage.getItem('token') ? loginLoginBar : unloginLoginBar}
           </div>
           <br />
         </div>
