@@ -2,8 +2,13 @@
   "files": {
     "main.css": "/static/css/main.1799b8bf.chunk.css",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "main.js": "/static/js/main.c1923d74.chunk.js",
     "main.js.map": "/static/js/main.c1923d74.chunk.js.map",
+=======
+    "main.js": "/static/js/main.461c1865.chunk.js",
+    "main.js.map": "/static/js/main.461c1865.chunk.js.map",
+>>>>>>> parent of 5066a23... build
 =======
     "main.js": "/static/js/main.461c1865.chunk.js",
     "main.js.map": "/static/js/main.461c1865.chunk.js.map",
@@ -15,7 +20,11 @@
     "static/js/2.071deecf.chunk.js.map": "/static/js/2.071deecf.chunk.js.map",
     "index.html": "/index.html",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "precache-manifest.03640963ae400aa086f979fb8486561d.js": "/precache-manifest.03640963ae400aa086f979fb8486561d.js",
+=======
+    "precache-manifest.119191703ed40b1f26f079cbb1dfb2a8.js": "/precache-manifest.119191703ed40b1f26f079cbb1dfb2a8.js",
+>>>>>>> parent of 5066a23... build
 =======
     "precache-manifest.119191703ed40b1f26f079cbb1dfb2a8.js": "/precache-manifest.119191703ed40b1f26f079cbb1dfb2a8.js",
 >>>>>>> parent of 5066a23... build
@@ -29,7 +38,11 @@
     "static/js/2.071deecf.chunk.js",
     "static/css/main.1799b8bf.chunk.css",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "static/js/main.c1923d74.chunk.js"
+=======
+    "static/js/main.461c1865.chunk.js"
+>>>>>>> parent of 5066a23... build
 =======
     "static/js/main.461c1865.chunk.js"
 >>>>>>> parent of 5066a23... build
