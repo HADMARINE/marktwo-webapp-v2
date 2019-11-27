@@ -43,6 +43,10 @@ export default class Home extends Component {
     isLogin: false,
     isAlertVisible: true
   };
+
+
+
+
   componentWillMount() {
     if (sessionStorage.getItem('token')) {
       this.setState({ isLogin: true });
