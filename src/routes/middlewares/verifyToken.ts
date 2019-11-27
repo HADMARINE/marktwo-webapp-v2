@@ -13,7 +13,7 @@ export async function verifyToken(){
         'x-access-token' : sessionStorage.getItem('token')
     }
     const queryBody: any = {
-        userip : publicIp.v4()
+        userip : await publicIp.v4()
     }
     await fetch(apiUri + "/user/verify",{
         method:"POST",
