@@ -15,7 +15,7 @@ export async function verifyToken(){
     const queryBody: any = {
         userip : await publicIp.v4()
     }
-    await fetch(apiUri + "/user/verify",{
+    await fetch(apiUri + "/auth/verify",{
         method:"POST",
         body:JSON.stringify(queryBody),
         headers:queryHeader

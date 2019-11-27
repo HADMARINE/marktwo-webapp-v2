@@ -48,7 +48,7 @@ export default class Comsil extends Component {
 
   async componentWillMount() {
     await verifyToken();
-    this.handleDataRecieve();
+    await this.handleDataRecieve();
   }
   render() {
     return (
