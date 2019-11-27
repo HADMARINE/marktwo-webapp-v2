@@ -3,6 +3,8 @@ import publicIp from 'public-ip'
 
 export async function verifyToken(){
     if(!sessionStorage.getItem('token')){
+        alert ("토큰 검증에 실패했습니다.");
+        window.location.replace('/');
         return false;
     }
 
@@ -19,7 +21,7 @@ export async function verifyToken(){
         headers:queryHeader
     }).then(res => res.json())
     .then(data => {
-        if(data.status !== 200){
+        if(data.message){
             alert(data.message);
             window.location.replace("/");
         }

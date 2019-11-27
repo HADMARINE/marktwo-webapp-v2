@@ -49,7 +49,7 @@ export default class Login extends Component {
     const queryBody: any = {
       uid: this.state.id,
       password: this.state.password,
-      publicip: await publicIp.v4()
+      userip: await publicIp.v4()
     };
     const queryHeader: any = {
       'Content-Type': 'application/json'

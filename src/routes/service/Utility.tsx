@@ -49,8 +49,8 @@ export default class Utilty extends Component {
         alert(e);
       });
   };
-  componentWillMount() {
-    verifyToken();
+  async componentWillMount() {
+    await verifyToken();
     this.handleDataRecieve();
   }
   render() {
