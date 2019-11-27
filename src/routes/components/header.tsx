@@ -40,15 +40,14 @@ class Header extends Component {
       .then(res => res.json())
       .then(data => {
         if (data.status === 403) {
-          sessionStorage.removeItem('token');
-          sessionStorage.removeItem('userid');
-          localStorage.removeItem('token');
+          sessionStorage.clear();
+          localStorage.clear();
           alert('Error ' + data.status + ' : ' + data.message);
           window.location.replace('/');
         }
         if (!data.userid) {
-          localStorage.removeItem('token');
-          sessionStorage.removeItem('userid');
+          localStorage.clear();
+          sessionStorage.clear();
           this.setState({ isLogin: false });
           return;
         }

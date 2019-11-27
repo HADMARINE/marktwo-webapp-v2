@@ -25,7 +25,7 @@ import Game from './routes/service/Game'
 class App extends React.Component {
   constructor(props: any) {
     super(props);
-    document.title = '반성하세요 - dodol:i';
+    document.title = 'MARKTWO';
   }
   render() {
     return (
