@@ -178,7 +178,7 @@ export default class Login extends Component {
           <div className="Blank-xsmall" />
           <div>
             <a href="/register" style={{ color: 'skyblue' }}>
-              회원가입
+              회원가입{' '}
             </a>
             또는{' '}
             <a href="/find/password" style={{ color: 'skyblue' }}>
