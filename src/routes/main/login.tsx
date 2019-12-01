@@ -177,6 +177,9 @@ export default class Login extends Component {
           </Button>
           <div className="Blank-xsmall" />
           <div>
+            <a href="/register" style={{ color: 'skyblue' }}>
+              회원가입
+            </a>
             또는{' '}
             <a href="/find/password" style={{ color: 'skyblue' }}>
               비밀번호 찾기
