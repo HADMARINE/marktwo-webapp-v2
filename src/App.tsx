@@ -19,8 +19,10 @@ import Terms from './routes/etc/Terms';
 
 import Comsil from './routes/service/Comsil';
 import Utility from './routes/service/Utility';
-import Graphics from './routes/service/Graphics'
-import Game from './routes/service/Game'
+import Graphics from './routes/service/Graphics';
+import Game from './routes/service/Game';
+
+import ProductPage from './routes/service/ProductPage';
 
 class App extends React.Component {
   constructor(props: any) {
@@ -44,8 +46,11 @@ class App extends React.Component {
 
             <Route exact path="/service/comsil" component={Comsil} />
             <Route exact path="/service/utility" component={Utility} />
-            <Route exact path='/service/graphics' component={Graphics}/>
-            <Route exact path='/service/game' component={Game}/>
+            <Route exact path="/service/graphics" component={Graphics} />
+            <Route exact path="/service/game" component={Game} />
+            <Route path="/service/:name">
+              <ProductPage title="테스트" />
+            </Route>
 
             <Route exact path="/find/password" component={FindPassword} />
 
@@ -53,7 +58,7 @@ class App extends React.Component {
 
             <Route component={Notfound} />
           </Switch>
-        <div className='Blank-small'/>
+          <div className="Blank-small" />
         </Router>
       </div>
     );
