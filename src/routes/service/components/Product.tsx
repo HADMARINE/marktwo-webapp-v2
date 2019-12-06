@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../../../styles/tailwind.css';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import '../../../styles/index.scss';
+
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -67,16 +69,24 @@ export default class Product extends Component<any> {
           className="max-w-sm rounded overflow-hidden shadow-lg"
           style={{ margin: '1rem' }}
         >
-          <img className="w-full" src={this.state.img} alt="Product Photo" />
+          <img
+            className="w-full"
+            src={this.state.img}
+            alt="Product Photo"
+            style={{ height: '200px', objectFit: 'contain' }}
+          />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{this.state.title}</div>
             <p className="text-700 text-base">{this.state.content}</p>
           </div>
           <div
             className="px-6 py-4"
-            style={{ display: 'flex', justifyContent: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center'
+            }}
           >
-            {!this.state.maclink ? windowLink : windowMacLink}
+            <div>{!this.state.maclink ? windowLink : windowMacLink}</div>
           </div>
         </div>
       </>
