@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Button, InputGroup, FormControl, Alert } from 'react-bootstrap';
 import apiUri from '../api/getApiUri';
 import '../../styles/index.scss';
 import styles, { createGlobalStyle } from 'styled-components';
@@ -8,21 +8,18 @@ const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
-  background-color:rgb(24,24,24);
-  color:white;
 }
 body{
+  color:white;
   background-color:rgb(24,24,24);
 }
 .form-control{
-  
   background-color: rgb(60,60,60) !important;
   color: white !important;
   border-color: black !important;
   :focus{
     /* background-color:black; */
   }
-
 }`;
 export default class Register extends Component {
   state = {
@@ -96,21 +93,21 @@ export default class Register extends Component {
         });
         return;
       case 'name':
-        if(this.state.name.length <= 1 || this.state.name.length >= 5){
+        if (this.state.name.length <= 1 || this.state.name.length >= 5) {
           this.setState({
-            formErrors :{
+            formErrors: {
               ...this.state.formErrors,
-              name:'이름이 올바르지 않습니다.'
+              name: '이름이 올바르지 않습니다.'
             }
-          })
+          });
           return;
         }
         this.setState({
-          formErrors:{
+          formErrors: {
             ...this.state.formErrors,
-            name:''
+            name: ''
           }
-        })
+        });
         break;
       case 'email':
         const emailRegex = new RegExp(
@@ -250,8 +247,24 @@ export default class Register extends Component {
   };
 
   render() {
+    const MainAlert = (
+      <Alert
+        variant="dark"
+        onClose={() => this.setState({ isAlertVisible: false })}
+        dismissible
+        style={{ margin: '1rem' }}
+      >
+        <Alert.Heading>중요 공지</Alert.Heading>
+        <p>
+          회원가입 시 이름에 실명을 입력하지 않으면 계정이 삭제됩니다!
+          <br />
+          이름은 주민등록상 기재된 성명을 입력해 주셔야 합니다.
+        </p>
+      </Alert>
+    );
     return (
       <>
+        {MainAlert}
         <div className="Style-center">
           <GlobalStyle />
           <div className="Blank-small" />

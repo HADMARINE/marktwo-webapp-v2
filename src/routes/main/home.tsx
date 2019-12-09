@@ -44,9 +44,6 @@ export default class Home extends Component {
     isAlertVisible: true
   };
 
-
-
-
   componentWillMount() {
     if (sessionStorage.getItem('token')) {
       this.setState({ isLogin: true });
@@ -59,18 +56,17 @@ export default class Home extends Component {
         variant="dark"
         onClose={() => this.setState({ isAlertVisible: false })}
         dismissible
+        style={{ margin: '1rem' }}
       >
         <Alert.Heading>감사합니다!</Alert.Heading>
         <p>
-          여러분의 성원에 힘입어 MARKTWO V2 를 발표하게 되었습니다.
-          <br />
           모든 기능이 업데이트되어 돌아왔으며 지속적으로 업데이트 될 예정입니다.
           <br />
           모든 사람이 제한없는 컴퓨터 라이프를 누릴 수 있도록, MARKTWO는
           지속적으로 운영될 것입니다.
           <br />
           후원은 &nbsp;
-          <a href="mailto:joonlee031@outlook.com" style={{ color: '#2c4ac4' }}>
+          <a href="mailto:" style={{ color: '#2c4ac4' }}>
             이메일
           </a>{' '}
           로 문의바랍니다. 감사합니다
