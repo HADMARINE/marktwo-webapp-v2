@@ -21,10 +21,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
 }
-img{
-  border-radius: 5px;
-}
-
 `;
 
 const Wrapper = styled.div`

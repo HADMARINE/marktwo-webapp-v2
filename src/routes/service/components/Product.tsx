@@ -17,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
   color: white !important;
   border-color: black !important;
 
-}`;
+}
+`;
 export default class Product extends Component<any> {
   constructor(props: any) {
     super(props);
@@ -73,7 +74,11 @@ export default class Product extends Component<any> {
             className="w-full"
             src={this.state.img}
             alt="Product Photo"
-            style={{ height: '200px', objectFit: 'contain' }}
+            style={{
+              height: '200px',
+              objectFit: 'contain',
+              borderRadius: '15px'
+            }}
           />
           <div className="px-6 py-4">
             <div className="font-bold text-xl mb-2">{this.state.title}</div>
