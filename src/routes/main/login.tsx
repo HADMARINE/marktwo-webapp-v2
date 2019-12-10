@@ -1,5 +1,5 @@
 import React, { Component, Fragment, KeyboardEvent } from 'react';
-import { Form, Button, InputGroup, FormControl } from 'react-bootstrap';
+import { Form, Button, InputGroup, FormControl, Alert } from 'react-bootstrap';
 
 import apiUri from '../api/getApiUri';
 import styles, { createGlobalStyle } from 'styled-components';
@@ -103,8 +103,23 @@ export default class Login extends Component {
   };
 
   render() {
+    const LoginAlert = (
+      <Alert
+        variant="dark"
+        onClose={() => this.setState({ isAlertVisible: false })}
+        style={{ margin: '1rem' }}
+      >
+        <Alert.Heading>중요 공지!</Alert.Heading>
+        <p>
+          로그인이 되지 않을 시 실명 입력을 하지 않아 계정이 삭제 된 것입니다.
+          <br />
+          실명으로 회원가입을 다시 해주십시오.
+        </p>
+      </Alert>
+    );
     return (
       <Fragment>
+        {LoginAlert}
         <GlobalStyle />
         <div className="Style-center">
           <p className="Blank-small" />

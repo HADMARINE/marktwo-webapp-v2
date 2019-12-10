@@ -66,25 +66,9 @@ export default class Home extends Component {
       </Alert>
     );
 
-    const LoginAlert = (
-      <Alert
-        variant="dark"
-        onClose={() => this.setState({ isAlertVisible: false })}
-        style={{ margin: '1rem' }}
-      >
-        <Alert.Heading>중요 공지!</Alert.Heading>
-        <p>
-          로그인이 되지 않을 시 실명 입력을 하지 않아 계정이 삭제 된 것입니다.
-          <br />
-          실명으로 회원가입을 다시 해주십시오.
-        </p>
-      </Alert>
-    );
-
     const unLoginHome = (
       <div className="Style-center">
         <GlobalStyle />
-        {LoginAlert}
         <div>
           <p className="Blank-small" />
           <p className="Text-medium">쾌적한 컴퓨터실 생활의 중심</p>
