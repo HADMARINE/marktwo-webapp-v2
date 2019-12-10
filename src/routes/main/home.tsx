@@ -58,36 +58,37 @@ export default class Home extends Component {
         dismissible
         style={{ margin: '1rem' }}
       >
-        <Alert.Heading>감사합니다!</Alert.Heading>
+        <Alert.Heading>중요 공지!</Alert.Heading>
         <p>
-          모든 기능이 업데이트되어 돌아왔으며 지속적으로 업데이트 될 예정입니다.
-          <br />
-          모든 사람이 제한없는 컴퓨터 라이프를 누릴 수 있도록, MARKTWO는
-          지속적으로 운영될 것입니다.
-          <br />
-          후원은 &nbsp;
-          <a href="mailto:" style={{ color: '#2c4ac4' }}>
-            이메일
-          </a>{' '}
-          로 문의바랍니다. 감사합니다
+          짧은 시일 내로 회원가입 DB가 초기화될 예정입니다. 이후 회원가입 시에는{' '}
+          <b>인증 코드</b>가 있어야 가입이 되며
         </p>
       </Alert>
     );
+
+    const LoginAlert = (
+      <Alert
+        variant="dark"
+        onClose={() => this.setState({ isAlertVisible: false })}
+        style={{ margin: '1rem' }}
+      >
+        <Alert.Heading>중요 공지!</Alert.Heading>
+        <p>
+          로그인이 되지 않을 시 실명 입력을 하지 않아 계정이 삭제 된 것입니다.
+          <br />
+          실명으로 회원가입을 다시 해주십시오.
+        </p>
+      </Alert>
+    );
+
     const unLoginHome = (
       <div className="Style-center">
         <GlobalStyle />
+        {LoginAlert}
         <div>
           <p className="Blank-small" />
           <p className="Text-medium">쾌적한 컴퓨터실 생활의 중심</p>
           <p className="Text-xlarge Text-bold">MARKTWO</p>
-          {/* <Center>
-            <img
-              src="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSpHMNyvIRy6PolVWkmMg80JA0Kdcldq3vIxohYsRrtBKVZEyJAW6ls4b6EoKP7DzCQ6Fvnq5C694tN5eN06_Hb5gHp2.webp?r=105"
-              height="200px"
-              alt="예시 사진"
-              className="Style-flex-center"
-            />
-          </Center> */}
 
           <div className="Blank-medium" />
           <p className="Text-small Text-xlight">
