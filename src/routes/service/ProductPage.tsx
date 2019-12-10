@@ -15,6 +15,9 @@ body {
     background-color:rgb(24,24,24);
     overflow-y:visible;
 }
+img{
+  border-radius: 5px;
+}
 
 `;
 const Wrapper = styled.div`

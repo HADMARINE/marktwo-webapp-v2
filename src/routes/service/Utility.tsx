@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import ProductInfoList from './components/ProductInfoList';
 import apiUri from '../api/getApiUri';
-import verifyToken from '../middlewares/verifyToken'
+import verifyToken from '../middlewares/verifyToken';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -20,7 +20,12 @@ const GlobalStyle = createGlobalStyle`
     /* background-color:black; */
   }
 
-}`;
+}
+img{
+  border-radius: 5px;
+}
+
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -49,9 +54,9 @@ export default class Utilty extends Component {
         alert(e);
       });
   };
-   componentDidMount() {
-     verifyToken();
-     this.handleDataRecieve();
+  componentDidMount() {
+    verifyToken();
+    this.handleDataRecieve();
   }
   render() {
     return (
