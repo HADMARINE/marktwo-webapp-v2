@@ -11,10 +11,10 @@ const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
-  background-color:rgb(24,24,24);
-  color:white;
+
 }
 body{
+  color:white;
   background-color:rgb(24,24,24);
 }
 .form-control{
