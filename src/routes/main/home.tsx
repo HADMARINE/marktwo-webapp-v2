@@ -60,8 +60,10 @@ export default class Home extends Component {
       >
         <Alert.Heading>중요 공지!</Alert.Heading>
         <p>
-          짧은 시일 내로 회원가입 DB가 초기화될 예정입니다. 이후 회원가입 시에는{' '}
-          <b>인증 코드</b>가 있어야 가입이 되며
+          짧은 시일 내로 회원가입 DB가 초기화될 예정입니다.
+          <br />
+          이후 회원가입 시에는 <b>인증 코드</b>가 있어야 가입이 되며 코드가
+          없으면 회원가입이 진행되지 않습니다.
         </p>
       </Alert>
     );
