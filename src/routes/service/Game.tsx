@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Product from './components/Product';
 import apiUri from '../api/getApiUri';
 import ProductInfoList from './components/ProductInfoList';
 import '../../styles/index.scss';
