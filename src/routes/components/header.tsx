@@ -5,6 +5,7 @@ import publicIp from 'public-ip';
 import Alert from './Alert';
 
 import '../../styles/index.scss';
+import getUserData from '../api/getUserData';
 
 class Header extends Component {
   constructor(props: any) {
@@ -13,7 +14,8 @@ class Header extends Component {
   }
 
   state = {
-    isLogin: false
+    isLogin: false,
+    isAdmin: sessionStorage.getItem('isAdmin')
   };
 
   checkIsLogin = async () => {
@@ -45,14 +47,20 @@ class Header extends Component {
           alert('Error ' + data.status + ' : ' + data.message);
           window.location.replace('/');
         }
-        if (!data.userid) {
+        if (!data.uid) {
           localStorage.clear();
           sessionStorage.clear();
           this.setState({ isLogin: false });
           return;
         }
         this.setState({ isLogin: true });
-        sessionStorage.setItem('userid', data.userid);
+        if (data.isAdmin === true) {
+          this.setState({ isAdmin: 'true' });
+          sessionStorage.setItem('isAdmin', 'true');
+        } else {
+          this.setState({ isAdmin: 'false' });
+        }
+        sessionStorage.setItem('userid', data.uid);
       })
       .catch();
   };
@@ -80,6 +88,20 @@ class Header extends Component {
       </span>
     );
 
+    const adminLoginBar = (
+      <span>
+        <a className="Module-loginbutton" href="/logout">
+          LOGOUT
+        </a>
+        <a className="Module-loginbutton" href="/mypage">
+          MYPAGE
+        </a>
+        <a className="Module-loginbutton" href="/admin">
+          ADMIN
+        </a>
+      </span>
+    );
+
     const unloginLoginBar = (
       <span>
         <a className="Module-loginbutton" href="/logout">
@@ -103,7 +125,11 @@ class Header extends Component {
               MARKTWO
             </a>
 
-            {!sessionStorage.getItem('token') ? loginLoginBar : unloginLoginBar}
+            {sessionStorage.getItem('token')
+              ? this.state.isAdmin === 'true'
+                ? adminLoginBar
+                : unloginLoginBar
+              : loginLoginBar}
           </div>
           <br />
         </div>
